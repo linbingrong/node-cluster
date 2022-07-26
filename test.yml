@@ -1,0 +1,28 @@
+# document start
+# scalars 纯量，不能在分割的量
+key: value
+number: 100
+boolean: true
+# 字符串是不需要使用引号的，但是使用了也不会报错
+quote_string: 'quote string'
+# 多行字符串可以适应literal block，也就是竖线
+mutiple_string: |
+  line one
+  line two
+  line three
+# COLLECTION TYPES集合类型
+# 使用缩进表示层级关系，最好是两个空格
+person:
+  name: viking
+  age: 30
+  address:
+    city: 'shanghai'
+
+#Sequences 数组或者列表
+hobbies:
+  - Item 1
+  - Item 2
+  - name: 'weson'
+    value: 'xyz'
+    address:
+      city: 'beijing'

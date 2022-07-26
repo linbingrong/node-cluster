@@ -1,0 +1,19 @@
+version: '3'
+services:
+  lego-mongo:
+    image: mongo
+    container_name: lego-mongo
+    volumes: #指定对应数据持久化，相当于命令-v，无文件夹会自动创建
+      - '.docker-volumes/mongo/data:/data/db'
+    ports:
+      - 27017:27017
+  lego-backend:
+    depends_on:
+      - lego-mongo
+    build: # 需要构建
+      context: . #基于当前目录构建
+      dockerfile: Dockerfile
+    image: lego-backend
+    container_name: lego-backend
+    ports:
+      - 7001: 7001
