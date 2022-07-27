@@ -7,4 +7,3 @@ http
   .listen(7001);
 
 console.log("Server running at http://127.0.0.1:7001");
-console.log('测试release-it提交')
