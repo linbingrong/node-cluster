@@ -1,11 +1,12 @@
 {
   "name": "node-cluster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "cluster.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cluster":"loadtest -n 400 -c 50 --rps 200 http://localhost:3000/api/slow"
+    "release": "release-it",
+    "cluster": "loadtest -n 400 -c 50 --rps 200 http://localhost:3000/api/slow"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "loadtest": "^5.2.0"
+    "loadtest": "^5.2.0",
+    "release-it": "^15.2.0"
   }
 }
